@@ -1,14 +1,18 @@
-import { SanityLive } from "@/sanity/lib/live";
-import "../globals.css";
+import { SanityLive } from '@/sanity/lib/live';
+import '../globals.css';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 const MainLayout = ({ children }: Readonly<{ children: React.ReactNode }>) => {
-    return (
-        <main>
-            {children}
+  return (
+    <main>
+      <Header />
+      {children}
+      <Footer />
 
-            <SanityLive />
-        </main>
-    );
+      <SanityLive />
+    </main>
+  );
 };
 
 export default MainLayout;
